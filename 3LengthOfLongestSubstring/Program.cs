@@ -45,12 +45,8 @@ namespace _3LengthOfLongestSubstring
                 {
                     max = max > substr.Length ? max : substr.Length;
                     substr = substr.Substring(substr.IndexOf(ch) + 1);
-                    substr += ch;
                 }
-                else
-                {
-                    substr += ch;
-                }
+                substr += ch;
             }
 
             return max > substr.Length ? max : substr.Length;
